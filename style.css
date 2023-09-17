@@ -884,6 +884,23 @@
         position: fixed; left: 2%; bottom: 0;
         transition: all 0.6s ease;
         opacity: 1;
+        animation: sign ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes sign {
+        0%{
+            opacity: 0;
+            transform: translateY(-100%) scale(2.5) ;
+            
+        }
+        100%{
+            transform: scale(1) translateY(0) ;
+            opacity: 1;
+        }
+        
     }
 
     .sign:hover{
