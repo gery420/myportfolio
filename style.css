@@ -156,7 +156,7 @@
     font-size: 150%;
     font-weight: 800;
     color: white;
-    position: relative; margin-top: 5%;
+    position: relative; margin-top: 7%;
     text-align: center;
     letter-spacing: .2em;
     word-spacing: .01em;
@@ -728,7 +728,7 @@
     .skillset{
         width: 30% ;
         font-size: 150%;
-        position: relative; margin: 0; margin-left: 12%;
+        position: relative; margin: 0; margin-left: 12%; margin-top: 3% ;
         text-align: left;
     }
     
