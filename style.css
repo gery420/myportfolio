@@ -16,9 +16,23 @@
     font-size: 150%;
     color: white;
     position: relative; margin-top: 40%; margin-left: auto; margin-right: auto;
+    animation: introfade ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 
 }
 
+@keyframes introfade{
+    0%{
+        transform: scale(0.5) translateY(200%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        
+        opacity: 1;
+    }
+}
 
 
 .name{
@@ -27,6 +41,22 @@
     background-color: transparent;
     position: relative; margin: auto;
     text-align: center;
+    animation: fadein ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fadein{
+    0%{
+        transform: scale(0.5) translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        
+        opacity: 1;
+    }
 }
 
 .ashish{
@@ -56,8 +86,23 @@
     letter-spacing: .15em;
     opacity: 60%;
     line-height: 150%;
+    animation: desfade ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
 }
 
+@keyframes desfade{
+    0%{
+        transform: scale(0.5) translateY(80%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        
+        opacity: 1;
+    }
+}
 
 
 .abt{
