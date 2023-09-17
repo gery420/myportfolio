@@ -7,4 +7,4 @@
 #Will be updating my website as I move forward
 
 
-url = https://ashish-mishra.netlify.app/
+url = https://ashish.lol
