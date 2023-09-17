@@ -319,8 +319,12 @@
         color: white;
         position: relative; margin-top: 12%;
         text-align: center;
+
     
     }
+    
+
+    
     .name{
         width: 100%;
         height: 10%;
@@ -341,10 +345,10 @@
     
     }
     .desc{
-        
+        width: 75%;
         font-size: 120%;
         color: white;
-        position: relative; margin: auto;
+        position: relative; margin: auto; 
         padding-top: 5%;
     }
     
@@ -354,10 +358,9 @@
         width: 100%;
         height: 4%;
         background-color: transparent;
-        position: relative; margin: auto;
+        position: relative; margin: auto;margin-top: 40%;
         text-align: center;
-        padding-top: 18%;
-    
+           
         transition: all 0.5s ease;
     
     }
@@ -548,253 +551,8 @@
         float: right;
     }
 
-    
-   
-
-    
 }
-
-@media only screen and (min-width:768px){
-    .intro{
-        width: 100%;
-        font-size: 220%;
-        color: white;
-        position: relative; margin-top: 12%;
-        text-align: center;
-    
-    }
-    .name{
-        width: 100%;
-        height: 10%;
-        background-color: transparent;
-        position: relative; margin: auto;
-        text-align: center;
-        padding-top: 5%;
-    }
-    
-    .ashish{
-       
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 850;
-        font-size: 400%;
-        color: white;
-        letter-spacing: .15em;
-        
-    
-    }
-    .desc{
-        
-        font-size: 120%;
-        color: white;
-        position: relative; margin: auto;
-        padding-top: 5%;
-    }
-    
-    
-    
-    .abt{
-        width: 100%;
-        height: 4%;
-        background-color: transparent;
-        position: relative; margin: auto;
-        text-align: center;
-        padding-top: 18%;
-    
-        transition: all 0.5s ease;
-    
-    }
-    
-    .about{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 160%;
-        font-weight: 100;
-        color: #397dd7;
-        letter-spacing: .15em;  
-        transition: all 0.5s ease;
-        line-height: 175%;
-        position: relative; margin: auto;
-    }
-    
-    .abtli{
-        width: 18%;
-        border-bottom: 1.5px solid #397dd7;
-        transition: all 0.5s ease;
-        position: relative; margin: auto;
-    }
-    
-    
-    
-    
-    .skillset{
-        width: 60% ;
-        font-size: 150%;
-    }
-    
-    
-    .skill_desc{
-        width: 80%;
-        height: 25%;
-        
-    }
-    
-    
-    
-    .rec{
-        width: 100%;
-        height: 1%;
-        background-color: transparent;
-        position: relative; 
-        text-align: center;
-        transition: all 0.5s ease;
-        padding-bottom: 1%;
-    
-    }
-    
-    .reach{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 160%;
-        font-weight: 100;
-        color: #397dd7;
-        letter-spacing: .15em;  
-        transition: all 0.5s ease;
-        line-height: 200%;
-    
-    }
-    
-    .reli{
-        width: 23%;
-        border-bottom: 1.5px solid #397dd7;
-        position: relative; margin: auto;
-        
-    }
-    
-    
-    .instagram{
-        width: 25px;
-        height: 25px;
-        position: relative; margin: auto;
-        background-color: transparent;
-    }
-    
-    .in{
-        position: absolute; right: 390%; top: 680%; 
-    }
-    
-    .linkedin{
-        width: 25px;
-        height: 25px;
-        position: relative; margin: auto;
-        background-color: transparent;
-    }
-    
-    .link{
-        position: absolute; right: 1100%; top: 580%;
-    }
-    
-    .gmail{
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        position: relative; margin: auto;
-    }
-    
-    .mail{
-        position: absolute; top: 480%; left: 400%;
-    }
-    
-    .discord{
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        position: relative; margin: auto;
-    }
-    
-    .dis{
-        position: absolute; top: 380%; left: 1150%; 
-    }
-    
-    
-    #quote{
-        width: 90%;
-        height:15%;
-        background: rgba(59, 59, 59, 0.3);
-        margin: auto;
-        position: relative; margin-top: 20%;
-        border-radius: 25px;
-        text-align: center;
-    }
-    
-    .qu{
-        font-family: w3-cursive;
-        font-size: 175%;
-        font-style: italic;
-        font-weight: 700;
-        color: white;
-        padding: 40px 0;
-        opacity: 70%;
-    }
-    
-    
-    
-    
-    #footer{
-        width: 50%;
-        height: 5%;
-        position: relative; left: 10%; margin-bottom: 4%;
-        background-color: transparent;
-        float: left;
-    }
-    
-    .botdes{
-        width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: lighter;
-        font-size: 120%;
-        color: white;
-        opacity: 60%;
-        letter-spacing: 0.15em;
-        padding-top: 5%;
-        
-    }
-    
-    .hand{
-        opacity: 0;
-        transition: all .2s ease;
-    }
-    
-    
-    
-    .sign{
-        width: 10%;
-        height: 5%;
-        background-color: transparent;    
-        position: absolute; left: 0; top: 10%;
-        transition: all 0.6s ease;
-        opacity: 0;
-        transform: scale(1.4);
-    }
-    
-    
-    
-    .botfot{
-        width: 100%;
-        height: 1%;
-        background-color: white ;
-        position: absolute; top: 146%; margin-bottom: 10%;
-        opacity: 0;
-    }
-
-    .botlogo{
-        
-        background-color: #397dd7;
-        float: right;
-    }
-
-    
    
-
-    
-}
 
 @media only screen and (min-width:1000px){
     .intro{
@@ -803,7 +561,24 @@
         color: white;
         position: relative; left: 6%; margin: 0;
         padding-top: 15%;
+        animation: fadeintro ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
+
+    @keyframes fadeintro {
+        0%{
+            opacity: 0;
+            transform:translateY(80%) scale(0.5) ;
+            
+        }
+        100%{
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        
+    }
+
 
 
     .name{
@@ -814,7 +589,25 @@
         transition: all 0.3s ease;
         transition-delay: .1s;
         text-align: left;  
+        animation: fadename ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transform: translateY(0);
     }
+
+    @keyframes fadename {
+        0%{
+            opacity: 0;
+            transform:translateX(-100%) translateY(0) scale(0.5) ;
+            
+        }
+        100%{
+            transform: scale(1) translateY(0) translateX(0);
+            opacity: 1;
+        }
+        
+    }
+
     
     .ashish{
        
