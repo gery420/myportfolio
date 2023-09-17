@@ -25,6 +25,7 @@
     animation: introfade ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity: 0;
 
 }
 
@@ -50,6 +51,7 @@
     animation: fadein ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity: 0;
 
 }
 
@@ -97,6 +99,7 @@
     animation: desfade ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity: 0;
 
 }
 
@@ -177,8 +180,23 @@
     letter-spacing: .15em;
     line-height: 140%;
     opacity: 60%;
+    animation: scdes ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
+
+@keyframes scdes{
+    0%{
+        transform: scale(0.7) translateY(30%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        
+        opacity: 1;
+    }
+}
 
 
 .rec{
