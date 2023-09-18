@@ -14,6 +14,46 @@
 }
 
 
+.animated{
+    width: 100%;
+    height: 10%;
+    opacity: 0;
+    background-color: transparent;
+    transform: scale(0.8);
+    transition: all 2s ease;
+}
+
+.anibot{
+    width: 100%;
+    height: 1%;
+    opacity: 0;
+    background-color: transparent;
+    transform: scale(0.7);
+    transition: all 2s ease;
+}
+
+.aniskill{
+    width: 100%;
+    height: 1%;
+    opacity: 0;
+    background-color: transparent;
+    transform: scale(0.7);
+    transition: all 2s ease;
+    transition-delay: .5s;
+}
+
+.aniskilldesc{
+    width: 100%;
+    height: 1%;
+    opacity: 0;
+    position: relative; 
+    text-align: center;
+    background-color: transparent;
+    transform: scale(0.7);
+    transition: all 2s ease;
+}
+
+
 .intro{
     width: 50%;
     font-family: 'Courier New', Courier, monospace;
@@ -120,9 +160,8 @@
     width: 100%;
     height: 4%;
     background-color: transparent;
-    position: relative; margin: auto; margin-top: 80%;
+    position: relative; margin: auto; margin-top: 100%;
     text-align: center;
-
     transition: all 0.5s ease;
 
 }
@@ -156,7 +195,7 @@
     font-size: 150%;
     font-weight: 800;
     color: white;
-    position: relative; margin-top: 5%;
+    position: relative; margin-top: 7%;
     text-align: center;
     letter-spacing: .2em;
     word-spacing: .01em;
@@ -675,16 +714,38 @@
         text-align: left;
         line-height: 200%;
     }
-
-   
+    
+    .aniskill{
+        width: 40%;
+        height: 300px;
+        opacity: 0;
+        position: relative; left: 6%; margin-top: 2%;
+        background-color: transparent;
+        text-align: left;
+        transform: scale(0.7);
+        transition: all 2s ease;
+        transition-delay: .5s;
+    }
+    
+    .aniskilldesc{
+        width: 50%;
+        height: 1%;
+        opacity: 0;
+        position: relative; margin-left: 37%; margin-top: -30%;
+        text-align: center;
+        background-color: transparent;
+        transform: scale(0.7);
+        transition: all 2s ease;
+    }
+    
     .abt{
-        width: 20%;
+        width: 15%;
         height: 1%;
         background-color: transparent;
         position: relative; left: 12%; margin: 0; margin-top: 25%;
         text-align: left;    
         padding-top: 0;
-        transition: all 0.5s ease;
+        transition: all 2s ease;
     
     }
     
@@ -700,14 +761,14 @@
     }
     
     .abtli{
-        width: 55%;
+        width: 65%;
         border-bottom: 1.5px solid #397dd7;
         transition: all 0.5s ease;
         position: relative; margin-left: 0;
     }
     
     .abt:hover .about{
-        transform: translateX(20px);
+        transform: translateX(10%);
     }
     
     .abt:hover .abtli{
@@ -718,7 +779,7 @@
 
     
     .skillset{
-        width: 30% ;
+        width: 70% ;
         font-size: 150%;
         position: relative; margin: 0; margin-left: 12%; padding-top: 4%;
         text-align: left;
@@ -729,7 +790,7 @@
     
     .skill_desc{
         background-color: transparent;
-        width: 50%;
+        width: 100%;
         height: 5%;
         position: relative; left: 20%; margin-top: -22%;
         text-align: left;
