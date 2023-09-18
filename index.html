@@ -7,10 +7,117 @@
     <link rel="icon" href="Screenshot (501).png" type="image/x-icon">
     
     <link rel="stylesheet" href="style.css"> 
-    <style>
-        
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
     
-    </style>
+        // Function to handle the scroll event
+        function handleScroll() {
+            const animatedDiv = document.querySelector('.animated');
+            if (isInViewport(animatedDiv)) {
+            animatedDiv.style.opacity = 1;
+            
+            animatedDiv.style.transform = 'scale(1)';
+            
+           
+            }
+        }
+    
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', handleScroll);
+    
+        // Initial check in case the element is already in view
+        handleScroll();
+    </script>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport1(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Function to handle the scroll event
+        function handleScroll1() {
+            const animatedDiv1 = document.querySelector('.anibot');
+            if (isInViewport1(animatedDiv1)) {
+            animatedDiv1.style.opacity = 1;
+            animatedDiv1.style.transform='scale(1)';                       
+            }
+        }
+    
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', handleScroll1);
+    
+        // Initial check in case the element is already in view
+        handleScroll1();
+    </script>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport2(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Function to handle the scroll event
+        function handleScroll2() {
+            const animatedDiv2 = document.querySelector('.aniskill');
+            if (isInViewport2(animatedDiv2)) {
+            animatedDiv2.style.opacity = 1;
+            animatedDiv2.style.transform='scale(1)';                       
+            }
+        }
+    
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', handleScroll2);
+    
+        // Initial check in case the element is already in view
+        handleScroll2();
+    </script>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport3(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Function to handle the scroll event
+        function handleScroll3() {
+            const animatedDiv3 = document.querySelector('.aniskilldesc');
+            if (isInViewport3(animatedDiv3)) {
+            animatedDiv3.style.opacity = 1;
+            animatedDiv3.style.transform='scale(1)';                       
+            }
+        }
+    
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', handleScroll3);
+    
+        // Initial check in case the element is already in view
+        handleScroll3();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
@@ -36,79 +143,81 @@
                 developing various softwares and design.
         </p>        
 
+        <div class="animated">
         
-        <div class="abt"> 
-            <p class="about">About me</p> 
-            <div class="abtli"></div>
+            <div class="abt"> 
+                <p class="about">About me</p> 
+                <div class="abtli"></div>
+            </div>         
+        </div>
+
+        <div  class="aniskill">    
+            <p class="skillset">Learning Graphics Designing,<br> programming and <br>3D modelling</p>
         </div>
         
-        
-
-        
-        
-        <p class="skillset">Learning Graphics Designing,<br> programming and <br>3D modelling</p>
-        
-        <div class="circle"></div>
-
-        <p class="skill_desc">I am currently learning various skills such as full stack web development, graphics designing, data analysis and software 
-                development. Currently pursuing B.Tech ECE at Maharaja Surajmal Institute of Technology (2027). <br>I am a tech enthusiast, hoping to change 
-                the world through various tools and technology. I enjoy being a part of tech world and learning different programs and designs from a 
-                much experienced and helpful community. Looking forward to be a part of MSLA or GDSC and upskill myself in best possible ways.
-        </p>
-        
+        <div class="aniskilldesc">
+            <p class="skill_desc">I am currently learning various skills such as full stack web development, graphics designing, data analysis and software 
+                    development. Currently pursuing B.Tech ECE at Maharaja Surajmal Institute of Technology (2027). <br>I am a tech enthusiast, hoping to change 
+                    the world through various tools and technology. I enjoy being a part of tech world and learning different programs and designs from a 
+                    much experienced and helpful community. Looking forward to be a part of MSLA or GDSC and upskill myself in best possible ways.
+            </p>
+        </div>
        
+        <div class="anibot">
 
-        <div class="instagram">
-            <a href="https://instagram.com/ig.ashish.__"  target="_blank" title="Instagram">
-                <img class="in" src="./images/insta.jpg" width="25" height="25"/>
-            </a>
-        </div>
-        
-        
-        
-        <div class="linkedin">
-            <a href="https://linkedin.com/in/ashish-mishra-768bb128b" title="LinkedIn">
-                <img class="link" src="./images/linkedin.png" width="25" height="25"/>
-            </a>
-        </div>
-        
-        
-        <div class="gmail">
-            <a href="mailto:mashishkr025@gmail.com" title="Email">
-                <img class="mail" src="./images/email.png" width="25" height="25"/>
-            </a>
-        </div>
-        
-        
-        <div class="discord">
-            <a href="https://discordapp.com/users/786125239406952478" title="Discord">
-                <img class="dis" src="./images/discord.jpg" width="25" height="25"/>
-            </a>
-        </div>
-        
-        
-        <div class="rec">
+            <div class="instagram">
+                <a href="https://instagram.com/ig.ashish.__"  target="_blank" title="Instagram">
+                    <img class="in" src="./images/insta.jpg" width="25" height="25"/>
+                </a>
+            </div>
             
+            
+            
+            <div class="linkedin">
+                <a href="https://linkedin.com/in/ashish-mishra-768bb128b" title="LinkedIn">
+                    <img class="link" src="./images/linkedin.png" width="25" height="25"/>
+                </a>
+            </div>
+            
+            
+            <div class="gmail">
+                <a href="mailto:mashishkr025@gmail.com" title="Email">
+                    <img class="mail" src="./images/email.png" width="25" height="25"/>
+                </a>
+            </div>
+            
+            
+            <div class="discord">
+                <a href="https://discordapp.com/users/786125239406952478" title="Discord">
+                    <img class="dis" src="./images/discord.jpg" width="25" height="25"/>
+                </a>
+            </div>
+            
+            
+            <div class="rec">
+                
 
-            <p class="reach">Reach Me on</p>
+                <p class="reach">Reach Me on</p>
 
-            <div class="reli"></div>
-        </div>
-    
+                <div class="reli"></div>
+            </div>
+        
 
-        <div id="quote">
-            <p class="qu"> A program is never less than 90% complete, and never more <br>than 95% complete.</p>
-        </div>
+            <div id="quote">
+                <p class="qu"> A program is never less than 90% complete, and never more <br>than 95% complete.</p>
+            </div>
 
-        <img class="botlogo" src="./images/botlogo.png" width="200" height="110"/>
+            <img class="botlogo" src="./images/botlogo.png" width="200" height="110"/>
 
-        <div id="footer">
-            <img class="hand" src="./images/hand_code.png" width="300" height="70"  
-            style="position: relative; right: 20;"/>
-            <p class="botdes">Hand coded by myself :)</p>
+            <div id="footer">
+                <img class="hand" src="./images/hand_code.png" width="300" height="70"  
+                style="position: relative; right: 20;"/>
+                <p class="botdes">Hand coded by myself :)</p>
+                
+            </div>
+
             
         </div>
-
         <img class = "sign" src="./images/signature.png" />
     </div>
     
