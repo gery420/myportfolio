@@ -119,20 +119,48 @@
         // Initial check in case the element is already in view
         handleScroll3();
     </script>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport4(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Function to handle the scroll event
+        function handleScroll4() {
+            const animatedDiv4 = document.querySelector('.botani');
+            if (isInViewport4(animatedDiv3)) {
+            animatedDiv4.style.opacity = 1;
+            animatedDiv4.style.transform='scale(1)';                       
+            }
+        }
+    
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', handleScroll4);
+    
+        // Initial check in case the element is already in view
+        handleScroll4();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body::-webkit-scrollbar{
             display: block;
             width: 8px;
-            background-color: #000000;
+            background-image: linear-gradient(180deg, #000000 -10%, #181818 45%, #000000 90%);
         }
         body::-webkit-scrollbar-thumb{
             background-color: #585858;
             border-radius: 50px;
         }
         body::-webkit-scrollbar-thumb:hover{
-            background-color: #42628c;
+            background-color: #303030;
         }
+
     </style>
 
 </head>
@@ -229,9 +257,14 @@
                 <p class="botdes">Hand coded by myself :)</p>
                 
             </div>
-
-            
         </div>
+
+
+    
+        
+    
+            
+        
         
     </div>
     
