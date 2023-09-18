@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     
+
+        
     <title>I Me Myself</title>
-    <link rel="icon" href="Screenshot (501).png" type="image/x-icon">
+    <link rel="icon" href="./images/Screenshot (501).png" type="image/x-icon">
     
     <link rel="stylesheet" href="style.css"> 
     <script>
@@ -119,17 +120,30 @@
         handleScroll3();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body::-webkit-scrollbar{
+            display: block;
+            width: 8px;
+            background-color: #000000;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #585858;
+            border-radius: 50px;
+        }
+        body::-webkit-scrollbar-thumb:hover{
+            background-color: #42628c;
+        }
+    </style>
 
 </head>
 
 <body>
-
-    
-
-    
+      
     <div id="rectangle">
 
-
+        <div class="si">
+            <img class = "sign" src="./images/signature.png"/>
+        </div>
         <p class="intro">Hola, I am</p>
         
         <div class="name">
@@ -174,21 +188,21 @@
             
             
             <div class="linkedin">
-                <a href="https://linkedin.com/in/ashish-mishra-768bb128b" title="LinkedIn">
+                <a href="https://linkedin.com/in/ashish-mishra-768bb128b" target="_blank" title="LinkedIn">
                     <img class="link" src="./images/linkedin.png" width="25" height="25"/>
                 </a>
             </div>
             
             
             <div class="gmail">
-                <a href="mailto:mashishkr025@gmail.com" title="Email">
+                <a href="mailto:mashishkr025@gmail.com" target="_blank" title="Email">
                     <img class="mail" src="./images/email.png" width="25" height="25"/>
                 </a>
             </div>
             
             
             <div class="discord">
-                <a href="https://discordapp.com/users/786125239406952478" title="Discord">
+                <a href="https://discordapp.com/users/786125239406952478" target="_blank" title="Discord">
                     <img class="dis" src="./images/discord.jpg" width="25" height="25"/>
                 </a>
             </div>
@@ -218,7 +232,7 @@
 
             
         </div>
-        <img class = "sign" src="./images/signature.png" />
+        
     </div>
     
 </body>
