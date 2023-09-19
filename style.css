@@ -366,7 +366,7 @@
     position: fixed; left: 0%; top: 3%;
     justify-content: center;        
     opacity: 1;
-    animation: signf ease 2s;
+    animation: signm ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     z-index: 1;
@@ -380,7 +380,18 @@
 
 }
 
-
+@keyframes signm {
+    0%{
+        opacity: 0;
+        transform: translateY(-10%) scale(2.5) ;
+        
+    }
+    100%{
+        transform: scale(1) translateY(0) ;
+        opacity: 1;
+    }
+    
+}
 
 
 #botfot{
