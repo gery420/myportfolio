@@ -14,6 +14,13 @@
     background-image: linear-gradient(180deg, #000000 -10%, #181818 45%, #000000 90%);
 }
 
+#header{
+    width: 10%;
+    height: 100px;
+    position: static; top:0;
+    border-bottom: blur(50px);
+    background-color: #000000;
+}
 
 .animated{
     width: 100%;
