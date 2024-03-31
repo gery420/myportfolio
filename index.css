@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: auto;
+}
+
+#nav{
+    width: 99vw;
+    height: 10vh;
+    position: static;
+    margin-top: 2vh;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 2px 2px black;
+    z-index: 10;
+}
