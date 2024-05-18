@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me</title>
     <link rel="stylesheet" href="index.css">
+
+    <style> 
+        ::-webkit-scrollbar{
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: rgb(122, 122, 122);
+            border-radius: 27px;
+        }
+        ::-webkit-scrollbar-thumb:hover{
+            background: rgb(60, 60, 60);
+        }
+    </style>
 </head>
 <body>
-    <div id="nav"></div>
+    <div id="nav">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Contact</div>
+    </div>
+
+    <div id="p1">
+        <img class="me" src="./images/me.png" alt="my_pic"/> 
+        <div id="bio">
+            <div class="arrow right"></div>
+        </div>
+    </div>
+
 </body>
 </html>
