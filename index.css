@@ -5,8 +5,18 @@
 }
 
 @font-face {
-    font-family: "Nunito-B";
+    font-family: "Nunito-R";
     src: url("./src/NunitoSans_7pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-MI";
+    src: url("./src/NunitoSans_7pt-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-10R";
+    src: url("./src/NunitoSans_10pt-Regular.ttf");
 }
 
 #nav{
@@ -25,9 +35,14 @@
              -25px -25px 50px #ffffff;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .nav-item{
     z-index: 10;
-    font-family: 'Nunito-B',sans-serif;
+    font-family: 'Nunito-R',sans-serif;
     font-size: 20px;
     -webkit-user-select: none;
     user-select: none;
@@ -50,14 +65,39 @@
 .me{
     width: 650px;
     z-index: 1;
-    transform: translateX(-5%);
-    background-color: aqua;
+    transform: translateX(-15%);
+    background-color: transparent;
     -webkit-user-select: none;
     user-select: none;
 }
 
 #bio{
     z-index: 110;
-    width: 80vh;
-    height: 40vh;
+    width: 60vh;
+    height: 30vh;
+    transform: translateX(-30%);
+}
+
+.arrow1,
+.arrow2,
+.arrow3{
+    width: 25px;
+    height: 25px;
+    background: #e0e0e0;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    margin-left: 20px;
+    transform: rotate(-45deg);
+    padding: 4px;
+    box-shadow: 5px 5px 15px #bebebe,
+             -5px -5px 15px #ffffff;
+}
+
+.arrow2{
+    position: relative;
+    top: 15vh; left: 3vw;
+}
+.arrow3{
+    position: relative;
+    top: 30vh; left: 6vw;
 }
