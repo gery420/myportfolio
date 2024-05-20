@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me</title>
     <link rel="stylesheet" href="index.css">
-
+    <script src="script.js"></script>    
     <style> 
         ::-webkit-scrollbar{
             width: 8px;
@@ -18,21 +18,26 @@
             background: rgb(60, 60, 60);
         }
     </style>
+
 </head>
 <body>
+    <div class="cursor rounded"></div>
+    <div class="cursor pointed"><div>
+  
+
     <div id="nav">
         <a href="index.html">
-            <div class="nav-item">Home</div>
+            <div class="nav-item" id="nav-item1">Home</div>
         </a>
         <a>        
-            <div class="nav-item" >About</div>
+            <div class="nav-item" id="nav-item2">About</div>
         </a>
         <a>
-            <div class="nav-item">Contact</div>
+            <div class="nav-item" id="nav-item3">Contact</div>
         </a>
         
     </div>
-
+    
     <div id="p1">
         <img class="me" src="./images/me.png" alt="my_pic"/> 
         <div id="bio">
@@ -41,6 +46,6 @@
             <div class="arrow3"></div>
         </div>
     </div>
-
+    
 </body>
 </html>
