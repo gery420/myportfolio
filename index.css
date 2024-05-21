@@ -19,105 +19,143 @@
     src: url("./src/NunitoSans_10pt-Regular.ttf");
 }
 
-body{
-    cursor: none;
+html, body {
+    cursor: none; /* Hide the default cursor */
+    scroll-behavior: smooth;
 }
 
-.rounded{
+#custom-cursor, #secondary-cursor{
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    position: fixed;
+    background-color: black;
+    border-radius: 50%;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 100000; /* Ensure it appears above other elements */
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-out, height 0.2s ease-out, background 0.2s ease-out, border 0.2s ease-out, transform 0.1s ease-out;
+}
+
+#secondary-cursor {
+    width: 25px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.3); /* Slightly different appearance */
+    margin: 1%;
+}
+
+#custom-cursor.hover {
+    width: 64px; /* Adjust size as needed */
+    height: 64px; /* Adjust size as needed */
+    background: black;
+    border: 2px solid #000; /* Change border color as needed */
+    mix-blend-mode: overlay;
+
+}
+#secondary-cursor.hover{
     width: 30px;
     height: 30px;
-    border: 2px solid #fff;
-    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.408);
+    mix-blend-mode: multiply;
+    margin: 0;
 }
-.pointed{
-    width: 7px;
-    height: 7px;
-    background-color: white;
-    border-radius: 50%;
-    margin-bottom: 20rem;
-}
-  
+
 #nav{
     width: 50vw;
     height: 7vh;
     position: fixed;
     display: flex;
-    margin-top: 2vh;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 3vh;
+    left: 25%;
     justify-content: space-between;
     z-index: 1000;
+    border: 1px solid rgba(121, 121, 121, 0);
     border-radius: 82px;
     background: #e0e0e0;
     box-shadow:  25px 25px 100px #acacaa,
              -25px -25px 100px #ffffff;
+    transition: all .5s ease;
+}
+
+#nav:hover{
+    transform: translateX(-50%);
+    transform: scale(1.1);
+    border: 1px solid rgba(121, 121, 121, 0.178);
 }
 
 a{
     text-decoration: none;
     color: black;
+    cursor: none;
 }
 
 .nav-item{
+    width: 8vw;
+    height: 6vh;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: monospace;
     font-size: 20px;
     -webkit-user-select: none;
     user-select: none;
     letter-spacing: .1em;
+    background-color: transparent;
+    transition: all .5s ease;
 }
 
-#nav-item1:hover{
-    cursor: url('./images/home.png'), auto;
-}
-
-#nav-item2:hover{
-    cursor: url('./images/about.png'), auto;
-}
-#nav-item3:hover{
-    cursor: url('./images/contact.png'), auto;
+.nav-item:hover{
+    font-size: 24px;
 }
 
 #p1{
     display: flex;
     justify-content: space-between;
-    margin-top: 5vh;
-    width: 99vw;
-    height: 95.1vh;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     border-bottom: 2px solid black;
-    z-index: -1;
+    z-index: 1;
 }
 
 .me{
-    width: 650px;
-    z-index: 1;
-    transform: translateX(-15%);
-    background-color: transparent;
+    width: 500px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
 }
 
-#bio{
-    z-index: 110;
-    width: 60vh;
-    height: 30vh;
-    transform: translateX(-30%);
+#p2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    left: 25%;
+    background-color: #acacaa;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 1s ease-out;
 }
 
-.arrow1,
-.arrow2,
-.arrow3{
-    position: absolute; left: -3vw;
-    width: 25px;
-    height: 25px;
-    background: #e0e0e0;
-    transform: rotate(-45deg);
-    padding: 4px;
-    box-shadow: 5px 5px 15px #bebebe,
-             -5px -5px 15px #ffffff;
+#p2.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.arrow2{
-    margin-top: 15vh;
+#p3{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    left: 25%;
+    background-color: yellow;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.arrow3{
-    margin-top: 30vh;
+
+#p3.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
