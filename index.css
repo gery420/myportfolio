@@ -156,8 +156,8 @@ a{
     top: 40%;
     left: 5%;
     letter-spacing: -0.07em;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 .bar {
