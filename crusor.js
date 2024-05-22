@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (event) => {
 
     //CURSOR
     
@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     secondaryCursor.id = 'secondary-cursor';
     document.body.appendChild(secondaryCursor);
 
-    let cursorX = 0, cursorY = 0;
-    let mouseX = 0, mouseY = 0;
-    let secondaryX = 0, secondaryY = 0;
+    let cursorX = window.innerWidth / 4;
+    let cursorY = window.innerHeight / 4;
+    let mouseX = cursorX;
+    let mouseY = cursorY;
+    let secondaryX = cursorX;
+    let secondaryY = cursorY;
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX ;
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR-hover-NAV-BAR
 
-    const hoverElements = document.querySelectorAll('.nav-item');
+    const hoverElements = document.querySelectorAll('.nav-item, #time');
     hoverElements.forEach(element => {
         element.addEventListener('mouseenter', () => {
             customCursor.classList.add('hover');
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR-hide
 
-    //const hideCursorElements = document.querySelectorAll('#p3');
+    //const hideCursorElements = document.querySelectorAll('#time');
     //hideCursorElements.forEach(element => {
     //    element.addEventListener('mouseenter', () => {
     //        customCursor.style.opacity = '0';
@@ -69,46 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
     //});
 
 
-
-    //Slide-UP-onScroll
-
-    const slideUpElements = document.querySelectorAll('#p2, #p3');
-
-    function checkSlideUp() {
-        slideUpElements.forEach(slideUpElement => {
-            const slideInAt = (window.scrollY + window.innerHeight) - slideUpElement.clientHeight / 2;
-            const elementBottom = slideUpElement.offsetTop + slideUpElement.clientHeight;
-            const isHalfShown = slideInAt > slideUpElement.offsetTop;
-            const isNotScrolledPast = window.scrollY < elementBottom;
-
-            if (isHalfShown && isNotScrolledPast) {
-                slideUpElement.classList.add('visible');
-            } else {
-                slideUpElement.classList.remove('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkSlideUp);
-
-
-    //scrollTo-onClick-NAV-bar
-
-    const links = document.querySelectorAll('#nav a');
-
-    for (const link of links) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop, 
-                behavior: 'smooth'
-            });
-        });
-    }
-
-      
 });
