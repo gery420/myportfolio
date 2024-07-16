@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         infinite: false,
         })
     
-        //get scroll value
-        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-        console.log({ scroll, limit, velocity, direction, progress })
-        })
-    
-        function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-        }
-    
-        requestAnimationFrame(raf)
+    //get scroll value
+    lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+    console.log({ scroll, limit, velocity, direction, progress })
+    })
+
+    function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
 })

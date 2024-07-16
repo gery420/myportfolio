@@ -25,38 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
         var t = new Date();
         var hours = t.getHours();
 
-        if ((hours>=0) && (hours<12)){
-            document.getElementById('welcome').innerHTML = 'Good Morning';
-        } else if (hours==12) {
-            document.getElementById('welcome').innerHTML = 'Happy Midday';
-        } else if ((hours>12)&&(hours<=17)){
-            document.getElementById('welcome').innerHTML = 'Good Afternoon';
-        } else if ((hours>17)&&(hours<=24)){
-            document.getElementById('welcome').innerHTML = 'Good Night';
+        if (((hours>=22) && (hours<24)) || (hours>=0) && (hours<4)){
+            document.getElementById('greet').innerHTML = 'Good Night!';
+        } else if ((hours>=4)&&(hours<12)){
+            document.getElementById('greet').innerHTML = 'Good Morning';
+        } else if ((hours>=12)&&(hours<16)){
+            document.getElementById('greet').innerHTML = 'Good Afternoon';
+        }else if ((hours>=16)&&(hours<20)){
+            document.getElementById('greet').innerHTML = 'Good Evening';
+        }else if ((hours>=20)&&(hours<22)){
+            document.getElementById('greet').innerHTML = 'Hope you had a <br>Good Day!';
         } else {
-            document.getElementById('welcome').innerHTML = 'Welcome';
+            document.getElementById('greet').innerHTML = 'Welcome';
         }
     }
     greetings();
 
     // script.js
 // script.js
-    window.onload = function() {
-        const progressBar = document.getElementById('barID');
-
-        function resetProgressBar() {
-            progressBar.style.width = '0';
-            setTimeout(() => {
-                progressBar.style.width = '32vw';
-            }, 1); // Delay the reset to ensure the transition restarts
-        }
-
-        // Initially set the progress bar width to start animation
-        progressBar.style.width = '32vw';
-
-        // Set interval to reset progress bar every 60 seconds
-        setInterval(resetProgressBar, 60000);
-    };
-
 
 });
