@@ -1,9 +1,3 @@
-*{
-    padding: 0;
-    margin: auto;
-    background-color: #000000;
-    overflow-x: hidden ;
-}
 
 @font-face {
     font-family: "Nunito-R";
@@ -26,8 +20,12 @@
 }
 
 html, body {
-    cursor: none; /* Hide the default cursor */
+    cursor: none;
+    margin: 0px; 
+    padding: 0px;
+    background-color: black;
 }
+
 ::-webkit-scrollbar{
     width: 7px;
 }
@@ -75,7 +73,7 @@ html, body {
     display: flex;
     margin-top: 2vh;
     left: 25%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     z-index: 1000;
     border: 2px solid white;
     background-color: #000000e7;
@@ -120,27 +118,23 @@ a{
     height: 3vh;
     left: 1vw;
     position: fixed;
-    top: 3%;
+    margin-top: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     font-family: monospace,monospace;
     border-radius: 20px;
-    font-size: 1em;
+    font-size: 0.95em;
     background-color: #000000e7;
     border: 1px solid rgba(255, 255, 255);
     -webkit-user-select: none;
     user-select: none;
 }
 
-#p1,
-#p2,
-#p3{
-    width: 100vw;
+.stack{
+    width: 100%;
     height: 100vh;
-    border-bottom: 2px solid white;
-
 }
 
 #greet{
