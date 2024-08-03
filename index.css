@@ -23,7 +23,8 @@ html, body {
     cursor: none;
     margin: 0px; 
     padding: 0px;
-    background-color: black;
+    background-color: #101010;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -66,27 +67,40 @@ html, body {
     opacity: 0.4;
 }
 
+.header{
+    z-index: 100000;
+    position: fixed;
+    top: 6vh;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav{
-    width: 50vw;
+    width: 30vw;
     height: 6vh;
     position: fixed;
     display: flex;
-    margin-top: 2vh;
-    left: 25%;
     justify-content: space-evenly;
-    z-index: 1000;
-    border: 2px solid white;
-    background-color: #000000e7;
+    border-radius: 27px;
+    border: 1px solid rgba(242, 242, 242, .1);
+    background-color: rgba(242, 242, 242, .05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .nav:hover a{
-    opacity: 0.6;
-    transform: scale(0.8);
+    opacity: 0.7;
+    transform: scale(0.92);
 }
 
 .nav:hover a:hover{
     transform: scale(1);
-    opacity: 1}
+    opacity: 1;
+    text-shadow: 0 0 20px white;
+}
 
 a{
     text-decoration: none;
@@ -98,9 +112,9 @@ a{
 
 .nav-item{
     width: 8vw;
-    height: 6vh;
-    z-index: 10;
-    display: flex;
+    height: 100%;
+    display: flex;    
+    border-radius: 54px;
     justify-content: center;
     align-items: center;
     font-family: monospace, monospace;
@@ -109,44 +123,91 @@ a{
     user-select: none;
     letter-spacing: .1em;
     background-color: transparent;
-    transition: all .5s ease;
 }
 
 #time{
-    z-index: 1000;
-    width: 6vw;
-    height: 3vh;
-    left: 1vw;
+    width: 8vw;
+    height: 4vh;
+    left: 5vw;
     position: fixed;
-    margin-top: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     font-family: monospace,monospace;
     border-radius: 20px;
-    font-size: 0.95em;
-    background-color: #000000e7;
-    border: 1px solid rgba(255, 255, 255);
+    font-size: 1em;
+    border: 1px solid rgba(242, 242, 242, .1);
+    background-color: rgba(242, 242, 242, .05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     -webkit-user-select: none;
     user-select: none;
+}
+
+#user{
+    width: 8vw;
+    height: 4vh;
+    position: fixed; bottom: 1vh; left: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(242, 242, 242, .1);
+    background-color: rgba(242, 242, 242, .05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    text-align: center;
+    font-size: 1em;
+    font-family: monospace,monospace;
 }
 
 .stack{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
-#greet{
+.myself{
+    width: 20vw;
+    height: 10vh;
     position: absolute;
-    font-family: 'Courier New';
-    font-size: 6em;
-    font-weight: 100;
-    color: #ffffff;
-    top: 40%;
-    left: 5%;
-    letter-spacing: -0.07em;
+    left: 20%; top: 40%;
+    transition: all .3s ease;
     -webkit-user-select: none;
     user-select: none;
-    z-index: 200;
+    background-color: transparent;
+    overflow: hidden;    
+}
+
+.me1, .me2{
+    width: 100%;
+    height: 100%;
+    font-size: 6em;
+    font-family: 'Nunito-R',sans-serif;
+    position: relative; top: -100%;
+    font-weight: 100;
+    color: #ffffff;
+    letter-spacing: -0.07em;
+    line-height: 0;
+    transition: all .4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.me2 {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.myself:hover .me1 {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.myself:hover .me2 {
+    opacity: 1;
+    transform: translateY(0);
 }
