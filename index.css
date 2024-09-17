@@ -19,26 +19,32 @@
     src: url("./src/SpaceMono-Regular.ttf");
 }
 
+:root{
+    --gray: #546a7b25;
+    --background: #101010;
+    --text: #eef1ef;
+    --shadow: rgba(0, 0, 0, .2);
+    --border: rgba(242, 242, 242, .1);
+    --lightbg: #eef1efe2;
+}
+
+
 html, body {
-    cursor: none;
     margin: 0px; 
     padding: 0px;
-    background-color: #101010;
     overflow-x: hidden;
+    background-color: var(--background);
 }
 
 ::-webkit-scrollbar{
-    width: 7px;
+    display: none;
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgb(59, 59, 59);
-    border-radius: 20px;
-}
-#custom-cursor, #secondary-cursor{
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
+
+#custom-cursor{
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
     position: fixed;
-    background-color: white;
+    background-color: var(--text);
     border-radius: 50%;
     background-size: contain;
     pointer-events: none;
@@ -47,24 +53,15 @@ html, body {
     transition: width 0.2s ease-out, height 0.2s ease-out, background 0.2s ease-out, border 0.2s ease-out, transform 0.1s ease-out;
 }
 
-#secondary-cursor {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: 2px solid white;
+#custom-cursor.shover {
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    mix-blend-mode: difference;
 }
-
-#custom-cursor.hover {
-    width: 64px; /* Adjust size as needed */
-    height: 64px; /* Adjust size as needed */
-    background: transparent;
-    border: 2px solid white;
-}
-#secondary-cursor.hover{
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    opacity: 0.4;
+#custom-cursor.bhover {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    mix-blend-mode: difference;
 }
 
 .header{
@@ -83,10 +80,9 @@ html, body {
     position: fixed;
     display: flex;
     justify-content: space-evenly;
-    border-radius: 27px;
-    border: 1px solid rgba(242, 242, 242, .1);
-    background-color: rgba(242, 242, 242, .05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    box-shadow: 10px 10px 25px var(--shadow);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
@@ -97,17 +93,16 @@ html, body {
 }
 
 .nav:hover a:hover{
-    transform: scale(1);
+    transform: scale(1.1);
     opacity: 1;
-    text-shadow: 0 0 20px white;
+    text-shadow: 0 0 20px var(--text);
 }
 
 a{
     text-decoration: none;
-    color: white;
-    cursor: none;
+    color: var(--text);
     background-color: transparent;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 
 .nav-item{
@@ -118,9 +113,7 @@ a{
     justify-content: center;
     align-items: center;
     font-family: monospace, monospace;
-    font-size: 1.3em;
-    -webkit-user-select: none;
-    user-select: none;
+    font-size: 1.5rem;
     letter-spacing: .1em;
     background-color: transparent;
 }
@@ -133,62 +126,44 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: var(--text);
     font-family: monospace,monospace;
-    border-radius: 20px;
+    border-radius: 50px;
     font-size: 1em;
-    border: 1px solid rgba(242, 242, 242, .1);
-    background-color: rgba(242, 242, 242, .05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    border: 1px solid var(--border);
+    box-shadow: 10px 10px 25px var(--shadow);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#user{
-    width: 8vw;
-    height: 4vh;
-    position: fixed; bottom: 1vh; left: 5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 1px solid rgba(242, 242, 242, .1);
-    background-color: rgba(242, 242, 242, .05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-    text-align: center;
-    font-size: 1em;
-    font-family: monospace,monospace;
+    transition: all .2s ease;
+    background-color: var(--gray);
 }
 
 .stack{
     width: 100vw;
     height: 100vh;
+    background-color: var(--background);
 }
 
 .myself{
-    width: 20vw;
-    height: 10vh;
+    width: 16vw;
+    height: 8vh;
     position: absolute;
     left: 20%; top: 40%;
     transition: all .3s ease;
-    -webkit-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    overflow: hidden;    
+    overflow: hidden;   
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .me1, .me2{
     width: 100%;
     height: 100%;
-    font-size: 6em;
-    font-family: 'Nunito-R',sans-serif;
-    position: relative; top: -100%;
+    font-size: 5em;
+    font-family: 'Nunito-10R',monospace;
+    position: relative; 
     font-weight: 100;
-    color: #ffffff;
-    letter-spacing: -0.07em;
+    color: var(--text);
     line-height: 0;
     transition: all .4s ease;
     display: flex;
@@ -210,4 +185,71 @@ a{
 .myself:hover .me2 {
     opacity: 1;
     transform: translateY(0);
+}
+
+#p3{
+    background-color: var(--gray);
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    height: 95vh;
+}
+
+.contact{
+    width: 30vw;
+    font-family: 'Nunito-10R',monospace;
+    color: var(--text);
+    margin-top: 5vh;
+    left: 35vw;
+    position: absolute;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.social{
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    margin-top: 15vh;
+    background-color: var(--background);
+}
+
+.social:hover{
+    cursor: pointer;
+}
+
+.box{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: opacity .3s ease-in-out, transform .4s cubic-bezier(0.55, 0.55, 0.55, 0.55);
+}
+
+.one{
+    color: var(--text);
+    font-family: monospace;
+    font-size: 2em;
+    margin-left: 20%;
+    position: absolute;
+}
+.two{
+    width: 100%;
+    height: 0%;
+    color: var(--background);
+    font-family: monospace;
+    font-size: 2em;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: center;
+    text-indent: 5em;
+}
+
+.box.hoverone{
+    transform: scale(1.05);
+    .two{
+        width: 100%;
+        height: 100%;
+        transform: scaleY(1);
+        background-color: var(--text);
+    }
 }

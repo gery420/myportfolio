@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR
     
@@ -6,16 +6,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     customCursor.id = 'custom-cursor';
     document.body.appendChild(customCursor);
 
-    const secondaryCursor = document.createElement('div');
-    secondaryCursor.id = 'secondary-cursor';
-    document.body.appendChild(secondaryCursor);
-
     let cursorX = window.innerWidth / 4;
     let cursorY = window.innerHeight / 4;
     let mouseX = cursorX;
     let mouseY = cursorY;
-    let secondaryX = cursorX;
-    let secondaryY = cursorY;
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX ;
@@ -25,17 +19,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //CURSOR-smooth
 
     function updateCursor() {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-
-        secondaryX += (cursorX - secondaryX) * 0.2;
-        secondaryY += (cursorY - secondaryY) * 0.2;
+        cursorX += (mouseX - cursorX) * 0.14;
+        cursorY += (mouseY - cursorY) * 0.14;
 
         customCursor.style.left = `${cursorX}px`;
         customCursor.style.top = `${cursorY}px`;
-
-        secondaryCursor.style.left = `${secondaryX}px`;
-        secondaryCursor.style.top = `${secondaryY}px`;
 
         requestAnimationFrame(updateCursor);
     }
@@ -44,18 +32,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     //CURSOR-hover-NAV-BAR
 
-    const hoverElements = document.querySelectorAll('.nav-item, #time');
-    hoverElements.forEach(element => {
+    const smallHover = document.querySelectorAll('#time, .myself, .me1, .me2, .social');
+    smallHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
-            customCursor.classList.add('hover');
-            secondaryCursor.classList.add('hover');
+            customCursor.classList.add('shover');
         });
         element.addEventListener('mouseleave', () => {
-            customCursor.classList.remove('hover');
-            secondaryCursor.classList.remove('hover');
+            customCursor.classList.remove('shover');
         });
     });
-
+    const bigHover = document.querySelectorAll('.nav-item');
+    bigHover.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            customCursor.classList.add('bhover');
+        });
+        element.addEventListener('mouseleave', () => {
+            customCursor.classList.remove('bhover');
+        });
+    });
 
     //CURSOR-hide
 
