@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR-hover-NAV-BAR
 
-    const smallHover = document.querySelectorAll('#time, .myself, .me1, .me2, .social');
+    const smallHover = document.querySelectorAll('#time, .myself');
     smallHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
             customCursor.classList.add('shover');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             customCursor.classList.remove('shover');
         });
     });
-    const bigHover = document.querySelectorAll('.nav-item');
+    const bigHover = document.querySelectorAll('a');
     bigHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
             customCursor.classList.add('bhover');
