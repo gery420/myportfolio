@@ -230,7 +230,10 @@ a:hover{
 
     html, body{
         cursor: none;
-        overflow: hidden;
+        overflow-x: hidden;
+    }
+    #custom-curson{
+        display: none;
     }
     
 }
