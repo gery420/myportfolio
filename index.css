@@ -29,6 +29,11 @@
     src: url("./src/Poppins-Thin.ttf");
 }
 
+@font-face {
+    font-family: 'BA';
+    src: url(./src/SuperBrigadeSemiCondensed-6Razo.otf);
+}
+
 :root{
     --gray: #546a7b25;
     --background: #101010;
@@ -37,7 +42,10 @@
     --border: rgba(242, 242, 242, .1);
     --navbag: rgba(242, 242, 242, .05);
     --lightbg: #eef1efe2;
-    --blue:#0079D6;
+    --blue:#4285F4;
+    --red:#DB4437;
+    --yellow:#F4B400;
+    --green:#0F9D58;
 }
 
 html, body {
@@ -45,7 +53,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     width: 100%;
-    height: 300vh;
+    height: fit-content;
     background-color: var(--background);
     display: flex;
     justify-content: center;
@@ -91,7 +99,7 @@ html, body {
 
 #wrapper{
     width: 80%;
-    height: 100%;
+    height: fit-content;
     background-color: transparent;
     top: 0;
 }
@@ -139,7 +147,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background-color: var(--background);
 }
 #container>div{
     background-color: var(--background);
@@ -189,19 +197,99 @@ html, body {
 #container>div:last-child{
     font-size: 2.2vmax;
     top: 80%;
-    .ds{
+    .ds, .ai, .wd{
         color: var(--blue);
         font-family: 'PM', sans-serif;
     }
+}
+
+#work{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#work>div{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+#work>div:first-child{
+    top: 0;
+    font-family: 'PT', sans-serif;
+    font-size: 3vmax;
+    color: var(--text);
+    .at{
+        font-size: 2.2vmax;
+        font-style: italic;
+    }
+}
+#work>div:nth-child(2){
+    font-family: 'PB', sans-serif;
+    font-size: 4vmax;
+    text-align: left;
+    color: var(--blue);
+    font-style: italic;
+    .msit{
+        font-family: 'PR', sans-serif;
+        color: var(--text);
+        font-style: normal;
+        font-size: 4.2vmax;
+    }
+
+}
+#work>div:nth-child(3){
+    font-size: 3vmax;
+    font-family: 'PT', sans-serif;
+    margin-top: 5%;
+    color: var(--text);
+    .in{
+        font-size: 2.2vmax;
+
+    }
+    .dl{
+        font-size: 5vmax;
+        color: var(--blue);
+        font-family: 'PM', sans-serif;
+    }
+}
+#work>div:nth-child(4){
+    margin-top: 3%;
+    color: var(--text);
+    font-family: 'PT', sans-serif;
+    font-size: 3vmax;
+    .f{
+        font-size: 2.2vmax;
+    }
+    .msc, .bdc{
+        font-family: 'PM', sans-serif;
+        font-size: 4vmax ;
+    }
+    .msc{
+        color: var(--blue);
+    }
+    .bdc{
+        color: var(--red);
+    }
+    .tenure{
+        font-size: 3vmax;
+        color: var(--text);
+        opacity: 0.7;
+        font-family: 'Pl', sans-serif;
+    }
+
 }
 
 #filler{
     background-color: transparent;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 }
 
@@ -212,7 +300,7 @@ html, body {
     justify-content: center;
     align-items: center;
     display: flex;
-    top: 20%;
+    top: 70%;
     background-color: transparent;
 }
 
@@ -233,25 +321,25 @@ h1{
 #social{
     width: 100%;
     height: fit-content;
-    position: relative;
-    background-color: var(--background);
+    position: relative;;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     gap: 10px;
-    top: 30%;
+    top: 75%;
 }
 
-a{  
+.insta, .link{  
     width: fit-content;
     font-family: 'PL', sans-serif;
     font-size: 3vmax;
     margin-left: 15%;
     text-decoration: none;
+    position: relative;
 }
 
-a:nth-child(1){
+.insta{
     background: linear-gradient(to right, #833ab4,#fd1d1d,#fcb045);
     background-clip: text;
     color: transparent;
