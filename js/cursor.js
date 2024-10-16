@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR
+    const isTouchDevice = 'ontouchstart' in window && !('onmousemove' in window);
+
+    if (isTouchDevice) {
+        return;
+    }
+
     const customCursor = document.createElement('div');
     customCursor.id = 'custom-cursor';
     document.body.appendChild(customCursor);
@@ -29,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCursor();
 
-    //CURSOR-hover-NAV-BAR
 
     const smallHover = document.querySelectorAll('#time, span ');
     smallHover.forEach(element => {
@@ -49,10 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
             customCursor.classList.remove('bhover');
         });
     });
-
-    if (window.innerWidth<=768){
-        document.getElementsByTagName('body').style.cursor='default';
-    }
 
     //CURSOR-hide
 

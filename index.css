@@ -58,15 +58,6 @@ html, body {
     display: none;
 }
 
-@media screen and (max-width<=768px) {
-    body{
-        cursor: default;
-    }    
-    #custom-cursor{
-        display: none;
-    }
-}
-
 #custom-cursor{
     width: 20px; /* Adjust size as needed */
     height: 20px; /* Adjust size as needed */
