@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+        return;
+    }
     
     const customCursor = document.createElement('div');
     customCursor.id = 'custom-cursor';
