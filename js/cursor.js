@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    //CURSOR
-    const isTouchOnlyDevice = 'ontouchstart' in window && !('onmousemove' in window);
-
-    if (isTouchOnlyDevice) {
-        return;
-    }
-
-
     const customCursor = document.createElement('div');
     customCursor.id = 'custom-cursor';
     document.body.appendChild(customCursor);
-
+    
     let cursorX = window.innerWidth / 4;
     let cursorY = window.innerHeight / 4;
     let mouseX = cursorX;

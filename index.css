@@ -54,6 +54,12 @@ html, body {
     user-select: none;
 }
 
+@media (max-width: 1024px){
+    #custom-cursor {
+        display: none;
+    }
+}
+
 ::-webkit-scrollbar{
     display: none;
 }
