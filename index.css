@@ -33,18 +33,17 @@
     --gray: #546a7b25;
     --background: #101010;
     --text: #eef1ef;
-    --shadow: rgba(0, 0, 0, .2);
+    --shadow: rgba(0, 0, 0, 0.534);
     --border: rgba(242, 242, 242, .1);
     --navbag: rgba(242, 242, 242, .05);
     --lightbg: #eef1efe2;
     --blue:#0079D6;
 }
 
-
 html, body {
     margin: 0px; 
     padding: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--background);
 }
 
@@ -133,6 +132,7 @@ html, body {
     background-image: url("./images/me.png");
     background-size: cover;
     box-shadow: 10px 10px 25px var(--shadow);
+    
 }
 
 .myself{
@@ -145,7 +145,7 @@ html, body {
 .myself{
     width: 100%;
     height: 8vh;
-    top: 35%;
+    top: 36%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -153,7 +153,6 @@ html, body {
     font-size: 1.8cqmax;
     font-family: 'PL',sans-serif;
     color: var(--text);
-    margin-top: 5px;
 }
 
 .bio, .descp{
@@ -165,15 +164,12 @@ html, body {
     letter-spacing: 2px;
     position: absolute;
     background-color: transparent;
-    top: 43%;
+    top: 48%;
     text-align: center;
     font-size: 4cqmax;
-    .sk{
+    .ts{
         color: var(--blue);
-        background-image: url("./images/text-highlight.png");
-        background-position: 50% 50%;
-        background-size: contain;
-        background-repeat: no-repeat;
+        font-family: 'PM', sans-serif;
     }
 }
 
@@ -228,4 +224,13 @@ a{
 
 a:hover{
     cursor: pointer;
+}
+
+@media only screen and (max-width:768px) {
+
+    html, body{
+        cursor: none;
+        overflow: hidden;
+    }
+    
 }
