@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //CURSOR
-    const isTouchDevice = 'ontouchstart' in window && !('onmousemove' in window);
+    isTouchDevice = () => {
+        return ( 'ontouchstart' in window ) ||
+          ( navigator.maxTouchPoints > 0 ) ||
+          ( navigator.msMaxTouchPoints > 0 );
+    };
 
-    if (isTouchDevice) {
+    if (isTouchDevice){
         return;
     }
 
