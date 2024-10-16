@@ -54,10 +54,13 @@ html, body {
     user-select: none;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
 
 #custom-cursor{
-    width: 10px; /* Adjust size as needed */
-    height: 10px; /* Adjust size as needed */
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
     position: fixed;
     background-color: var(--text);
     border-radius: 50%;
@@ -66,16 +69,17 @@ html, body {
     z-index: 100000; /* Ensure it appears above other elements */
     transform: translate(-50%, -50%);
     transition: width 0.2s ease-out, height 0.2s ease-out, background 0.2s ease-out, border 0.2s ease-out, transform 0.1s ease-out;
+    mix-blend-mode: difference;
 }
 
 #custom-cursor.shover {
-    width: 25px; /* Adjust size as needed */
-    height: 25px; /* Adjust size as needed */
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
     mix-blend-mode: difference;
 }
 #custom-cursor.bhover {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
+    width: 45px; /* Adjust size as needed */
+    height: 45px; /* Adjust size as needed */
     mix-blend-mode: difference;
 }
 
@@ -156,6 +160,7 @@ html, body {
     color: var(--text);
     span{
         font-size: 3vmax;
+        color: var(--blue);
         font-family: 'PM', sans-serif;
     }
 }
