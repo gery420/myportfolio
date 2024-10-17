@@ -196,7 +196,7 @@ html, body {
 }
 #container>div:last-child{
     font-size: 2.2vmax;
-    top: 40%;
+    top: 35%;
     .ds, .ai, .wd{
         color: var(--blue);
         font-family: 'PM', sans-serif;
