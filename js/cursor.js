@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCursor();
 
 
-    const smallHover = document.querySelectorAll('#time, span ');
+    const smallHover = document.querySelectorAll('#time, .tech, .dl, .msc, .bdc, .ash');
     smallHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
             customCursor.classList.add('shover');
