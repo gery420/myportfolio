@@ -236,17 +236,21 @@ html, body {
     text-align: left;
     color: var(--blue);
     font-style: italic;
+    a{
+        text-decoration: none;
+    }
     .msit{
         font-family: 'PR', sans-serif;
         color: var(--text);
         font-style: normal;
         font-size: 4.2vmax;
+        text-decoration: none;
     }
-}
-.open{
-    text-decoration: none;
-    color: var(--text);
-    font-style: normal;
+    .tech{
+        color: var(--blue);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    }
 }
 #work>div:nth-child(3){
     font-size: 3vmax;
@@ -270,6 +274,9 @@ html, body {
     font-family: 'PT', sans-serif;
     font-size: 3vmax;
     margin-top: 6vh;
+    a{
+        text-decoration: none;
+    }
     .f{
         font-size: 2.2vmax;
         font-style: italic;
@@ -277,6 +284,9 @@ html, body {
     .msc, .bdc{
         font-family: 'PM', sans-serif;
         font-size: 4vmax ;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 5px;
     }
     .msc{
         color: var(--blue);
