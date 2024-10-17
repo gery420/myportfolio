@@ -346,6 +346,9 @@ h1{
     margin-left: 15%;
     text-decoration: none;
     position: relative;
+    .open{
+        display: none;
+    }
 }
 .insta{
     background: linear-gradient(to right, #833ab4,#fd1d1d,#fcb045);
@@ -382,5 +385,17 @@ a:nth-child(2){
     }
     #time{
         width: 8vmax;
+    }
+    .insta, .link{
+        .open{
+            display: contents;
+        }
+    }
+    .insta{
+        .open{
+            background: linear-gradient(to right, #833ab400 , #fd1d1d, #fcb04500);
+            background-clip: text;
+            color: transparent;        
+        }
     }
 }
