@@ -244,12 +244,12 @@ html, body {
         color: var(--text);
         font-style: normal;
         font-size: 4.2vmax;
-        text-decoration: none;
     }
     .tech{
         color: var(--blue);
         text-decoration: underline;
         text-decoration-style: dotted;
+        text-decoration-thickness: 0.5vmax;
     }
 }
 #work>div:nth-child(3){
@@ -286,7 +286,7 @@ html, body {
         font-size: 4vmax ;
         text-decoration: underline;
         text-decoration-style: dotted;
-        text-decoration-thickness: 5px;
+        text-decoration-thickness: 0.5vmax;
     }
     .msc{
         color: var(--blue);
