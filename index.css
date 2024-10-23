@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "PBB";
     src: url("./src/Poppins-Black.ttf");
@@ -153,7 +152,6 @@ html, body {
     background-color: var(--background);
     width: 100%;
     position: relative;
-
 }
 #container>div:first-child{
     width: 200px;
@@ -165,35 +163,42 @@ html, body {
     background-size: cover;
     box-shadow: 10px 10px 25px var(--shadow);
 }
-#container>div:nth-child(2){
-    top: 20%;
+/* Common properties */
+#container>div:nth-child(2),
+#container>div:nth-child(3),
+#container>div:last-child {
     text-align: center;
-    font-size: 2.5vmax;
-    font-family: 'PL',sans-serif;
+    font-family: 'PL', sans-serif;
     color: var(--text);
-    span{
+    position: relative;
+}
+
+/* Unique properties */
+#container>div:nth-child(2) {
+    top: 20%;
+    font-size: 2.5vmax;
+    span {
         font-size: 3vmax;
         color: var(--blue);
         font-family: 'PM', sans-serif;
     }
 }
-#container>div:nth-child(3),
-#container>div:last-child{
+
+#container>div:nth-child(3) {
     font-family: 'PT', sans-serif;
-    color: var(--text);
-    position: relative;
-    text-align: center;
     font-size: 3vmax;
     top: 25%;
-    .ts{
+    .ts {
         color: var(--blue);
         font-family: 'PM', sans-serif;
     }
 }
-#container>div:last-child{
+
+#container>div:last-child {
+    font-family: 'PT', sans-serif;
     font-size: 2.2vmax;
     top: 35%;
-    .ds, .ai, .wd{
+    .ds, .ai, .wd {
         color: var(--blue);
         font-family: 'PM', sans-serif;
     }
@@ -296,24 +301,50 @@ html, body {
     height: fit-content;
 }
 
+/* Common properties */
+#contact, #social, .insta, .link {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
 
+/* Unique properties */
+#contact {
+    height: 25%;
+    top: 10%;
+}
 
+h1 {
+    min-width: 25vmax;
+    height: 100%;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vmax;
+    font-family: 'PT', sans-serif;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    box-shadow: 10px 10px 25px var(--shadow);
+}
 
+#social {
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 20%;
+    gap: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.insta, .link {
+    width: fit-content;
+    font-family: 'PL', sans-serif;
+    font-size: 2.5vmax;
+    margin-left: 15%;
+}
 
 #filler{
     background-color: transparent;
