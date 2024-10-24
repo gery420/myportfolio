@@ -283,10 +283,10 @@ html, body {
         color: var(--blue);
     }
     .bdc{
+        color: var(--red);
         .open{
             color: var(--red);      
         }
-        color: var(--red);
     }
     .tenure{
         font-size: 3vmax;
