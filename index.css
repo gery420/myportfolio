@@ -67,6 +67,7 @@ html, body {
 ::-webkit-scrollbar{
     display: none;
 }
+
 #custom-cursor{
     width: 20px; /* Adjust size as needed */
     height: 20px; /* Adjust size as needed */
@@ -90,6 +91,7 @@ html, body {
     height: 45px; /* Adjust size as needed */
     mix-blend-mode: difference;
 }
+
 #wrapper{
     width: 80%;
     height: fit-content;
@@ -113,6 +115,7 @@ html, body {
 #page4{
     height: 30dvh;
 }
+
 #header{
     position: fixed;
     top: 2vh;
@@ -139,6 +142,7 @@ html, body {
     transition: all .2s ease;
     background-color: var(--navbag);
 }
+
 #container, #work, #working{
     width: 100%;
     height: 100%;
@@ -163,7 +167,6 @@ html, body {
     background-size: cover;
     box-shadow: 10px 10px 25px var(--shadow);
 }
-/* Common properties */
 #container>div:nth-child(2),
 #container>div:nth-child(3),
 #container>div:last-child {
@@ -172,8 +175,6 @@ html, body {
     color: var(--text);
     position: relative;
 }
-
-/* Unique properties */
 #container>div:nth-child(2) {
     top: 20%;
     font-size: 2.5vmax;
@@ -183,7 +184,6 @@ html, body {
         font-family: 'PM', sans-serif;
     }
 }
-
 #container>div:nth-child(3) {
     font-family: 'PT', sans-serif;
     font-size: 3vmax;
@@ -193,7 +193,6 @@ html, body {
         font-family: 'PM', sans-serif;
     }
 }
-
 #container>div:last-child {
     font-family: 'PT', sans-serif;
     font-size: 2.2vmax;
@@ -295,13 +294,13 @@ html, body {
         font-family: 'Pl', sans-serif;
     }
 }
-#working>div{
+
+#working{
     width: 100%;
-    position: relative;
-    height: fit-content;
+    height: 100%;
+    background-color: var(--background);
 }
 
-/* Common properties */
 #contact, #social, .insta, .link {
     width: 100%;
     position: relative;
@@ -311,7 +310,6 @@ html, body {
     background-color: transparent;
 }
 
-/* Unique properties */
 #contact {
     height: 25%;
     top: 10%;
