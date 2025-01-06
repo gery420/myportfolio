@@ -1,36 +1,43 @@
 @font-face {
     font-family: "PBB";
     src: url("./src/Poppins-Black.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "PB";
     src: url("./src/Poppins-Bold.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "PL";
     src: url("./src/Poppins-Light.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "PR";
     src: url("./src/Poppins-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "PM";
     src: url("./src/Poppins-Medium.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "PT";
     src: url("./src/Poppins-Thin.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BA';
-    src: url(./src/SuperBrigadeSemiCondensed-6Razo.otf);
+    src: url("./src/SuperBrigadeSemiCondensed-6Razo.otf");
+    font-display: swap;
 }
 
 :root{
@@ -164,7 +171,7 @@ html, body {
     align-self: center;
     top: 15%;
     border-radius: 50%;
-    background-image: url("./images/me.png");
+    background-image: url("./images/me.webp");
     background-size: cover;
     box-shadow: 10px 10px 25px var(--shadow);
 }
