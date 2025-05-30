@@ -117,11 +117,10 @@ html, body {
     height: 80vh;
 }
 #page3{
-    height: 60vh;
+    height: 50vh;
 }
 #page4{
     height: 30vh;
-    margin-top: 20vh;
 }
 
 #header{
@@ -465,6 +464,11 @@ a:nth-child(2){
 }
 
 @media only screen and (min-width:1024px) {
+
+    #page4{
+        margin-top: 10vh;
+    }
+
     #contact{
         top: 0;
         height: 30%;
