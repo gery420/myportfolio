@@ -8,6 +8,14 @@ function scroll() {
         scrollPercent = 100;
     }
 
+    if (scrollPercentage<0){
+        scrollPercentage = 0;
+    }
+
+    if (scrollPercentage>100){
+        scrollPercentage = 100;
+    }
+
     document.getElementById('time').innerHTML=`${Math.round(scrollPercentage)}`;
 }
 
