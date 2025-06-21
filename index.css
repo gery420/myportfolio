@@ -345,9 +345,51 @@ html, body {
         color: var(--text);
         text-decoration: none;
     }
-    
+    .in{
+        font-family: 'PT', sans-serif;
+        font-size: 2.2vmax;
+        font-style: italic;
+    }
 }
 
+#current>div:nth-child(3){
+    font-family: 'PL', sans-serif;
+    font-size: 3vmax;
+    color: var(--text);
+    margin-top: 6vh;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    a{
+        text-decoration: none;
+        color: var(--text);
+    }
+    .resume{
+        width: 18vmax;
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        font-size: 2.5vmax;
+        height: 100%;
+        border: 2px solid var(--border);
+        border-radius: 70px;
+        box-shadow: 10px 10px 25px var(--shadow);
+    }
+}
+
+#filler{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
 #contact, #social, .insta, .link {
     width: 100%;
     position: relative;
@@ -362,7 +404,17 @@ html, body {
     top: 10%;
 }
 
-h1 {
+#contact{   
+    width: 100%;
+    height: 25%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 10%;
+    background-color: transparent;
+}
+h1{
     min-width: 25vmax;
     height: 100%;
     color: var(--text);
@@ -389,62 +441,12 @@ h1 {
     font-family: 'PL', sans-serif;
     font-size: 2.5vmax;
     margin-left: 15%;
-}
-
-#filler{
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-#contact{   
-    width: 100%;
-    height: 25%;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    top: 10%;
-    background-color: transparent;
-}
-h1{
-    min-width: 25vmax;
-    height: 100%;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vmax;
-    font-family: 'PT', sans-serif;
-    border: 2px solid var(--border);
-    border-radius: 50px;
-    box-shadow: 10px 10px 25px var(--shadow);
-}
-#social{
-    width: 100%;
-    height: fit-content;
-    position: relative;;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    top: 20%;
-    gap: 10px;
-}
-.insta, .link{  
-    width: fit-content;
-    font-family: 'PL', sans-serif;
-    font-size: 2.5vmax;
-    margin-left: 15%;
     text-decoration: none;
-    position: relative;
     .open{
         display: none;
     }
 }
+
 .insta{
     background: linear-gradient(to right, #833ab4,#fd1d1d,#fcb045);
     background-clip: text;
@@ -466,7 +468,7 @@ a:nth-child(2){
 @media only screen and (min-width:1024px) {
 
     #page4{
-        margin-top: 10vh;
+        margin-top: 20vh;
     }
 
     #contact{
@@ -495,4 +497,8 @@ a:nth-child(2){
             color: transparent;        
         }
     }
+    #current>div:nth-child(3){
+        height: 14vh;
+    }
+
 }
