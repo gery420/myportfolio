@@ -120,6 +120,7 @@ html, body {
     height: 50vh;
 }
 #page4{
+    margin-top: 20vh;
     height: 30vh;
 }
 
@@ -302,6 +303,9 @@ html, body {
         font-family: 'Pl', sans-serif;
     }
 }
+#current{
+    margin-top: 50dvh;
+}
 
 #current>div{
     position: relative;
@@ -310,7 +314,6 @@ html, body {
     display: block;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 6vh;
 }
 
 #current>div:first-child{
@@ -338,7 +341,7 @@ html, body {
     font-size: 3vmax;
     text-align: left;
     color: var(--text);
-
+    margin-top: 6vh;
     span, a{
         font-size: 4vmax;
         font-family: 'PM', sans-serif;
@@ -468,7 +471,7 @@ a:nth-child(2){
 @media only screen and (min-width:1024px) {
 
     #page4{
-        margin-top: 20vh;
+        margin-top: 40vh;
     }
 
     #contact{
